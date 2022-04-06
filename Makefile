@@ -1,5 +1,7 @@
 .PHONY: all
+# Specifies the sorting order
 ORDER = -r
+# Specifies the print limit to rankings
 LIMIT = 3
 
 # As default 'make' target, run all targets
@@ -31,7 +33,7 @@ p3:
 	awk -v var="$(LIMIT)" -f  proj3/awk/SortTotal.awk > "proj3/Output/top_3_by_make.csv" 
 
 	# Gets top LIMIT of each category
-	awk -v var="$(LIMIT)" -f proj3/awk/classes.awk data/data.csv > proj3/Output/classes.csv
+	awk -v var="$(LIMIT)" -v order="$(ORDER)" -f proj3/awk/classes.awk data/data.csv > proj3/Output/classes.csv
 
 	#Adding headers to final files
 	cat proj3/headers.csv proj3/Output/sorted_ranks.csv > "sorted_ranks.csv"

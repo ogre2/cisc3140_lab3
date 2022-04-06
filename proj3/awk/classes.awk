@@ -115,7 +115,10 @@ END {
 	for(ttl in rttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(rttl[rTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(rttl[rTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(rttl[rTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 		
@@ -146,7 +149,10 @@ END {
 	for(ttl in ettl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(ettl[eTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(ettl[eTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(ettl[eTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 
@@ -177,7 +183,10 @@ END {
 	for(ttl in bttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(bttl[bTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(bttl[bTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(bttl[bTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 		
@@ -208,7 +217,10 @@ END {
 	for(ttl in mttl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(mttl[mTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(mttl[mTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(mttl[mTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 
@@ -239,7 +251,10 @@ END {
 	for(ttl in mottl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(mottl[moTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(mottl[moTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(mottl[moTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 
@@ -270,7 +285,10 @@ END {
 	for(ttl in cottl) {
 		# Setting the criteria for top three results based on the total
 		# Sorting it by numerically descending
-		top3 = asorti(cottl[coTotal], currentTotal, "@val_num_desc")
+		if (order == "")
+			top3 = asorti(cottl[coTotal], currentTotal, "@val_num_asc")
+		else
+			top3 = asorti(cottl[coTotal], currentTotal, "@val_num_desc")
 		# Limiting results to three cars
 		top3 = (top3 > var) ? var : top3
 
