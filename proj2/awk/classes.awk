@@ -8,7 +8,8 @@ BEGIN {
 
 # Calculating and creating totals array for the totals column
 {
-        # Variables that will track the total sum of each judged categories for each car for Racer, Engine, Body_Frame, Mods, Mods_Overall, and Car_overall
+        # Variables that will track the total sum of each judged categories for 
+	# each car for Racer, Engine, Body_Frame, Mods, Mods_Overall, and Car_overall
         ovRacer[FNR] = 0;
         ovEngine[FNR] = 0;
         ovBodyFrame[FNR] = 0;
